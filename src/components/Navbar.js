@@ -20,7 +20,6 @@ function Navbar() {
           </li>
         </ul>
       </nav>
-      <i class="fa-solid fa-user"></i>
     </header>
   );
 }
