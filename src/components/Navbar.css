@@ -1,0 +1,36 @@
+.headerNav {
+  max-height: 150px;
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.containerLogo img {
+  width: 80px;
+}
+img {
+  transition: all 0.3s;
+}
+img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  margin: 5px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #00a3e8;
+}
