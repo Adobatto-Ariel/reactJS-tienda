@@ -5,12 +5,18 @@ import CartWidget from "./CartWidget";
 
 function Navbar() {
   return (
-    <header className="headerNav">
-      <div className="containerLogo">
-        <img src={logo} />
-        <h1>MV Kydex® ARG</h1>
+    <header className="header">
+      <div className="headerNav">
+        <div className="containerLogo">
+          <img src={logo} />
+          <h1>MV Kydex® ARG</h1>
+        </div>
+        <div className="userCart">
+          <img src={user} title="Login" />
+          <CartWidget />
+        </div>
       </div>
-      <nav>
+      <nav className="containerNav">
         <ul>
           <li>
             <a className="home" href="#">
@@ -23,11 +29,6 @@ function Navbar() {
           <li>
             <a href="#">Nosotros</a>
           </li>
-          <div className="userCart">
-            <i className="bi bi-person-circle"></i>
-            <img src={user} title="Usuario" />
-            <CartWidget />
-          </div>
         </ul>
       </nav>
     </header>
