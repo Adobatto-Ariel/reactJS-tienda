@@ -1,0 +1,19 @@
+.ItemListContainer {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+  background-color: rgb(61, 61, 61);
+}
+
+@media (max-width: 850px) {
+  .ItemListContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .ItemListContainer {
+    grid-template-columns: 1fr;
+  }
+}

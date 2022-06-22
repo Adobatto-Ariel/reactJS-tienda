@@ -1,23 +1,13 @@
-import logo from "./assets/favicon.png";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import ItemListContainer from "./components/productList/ItemListContainer";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome!</p>
-        <a
-          className="App-link"
-          href="https://github.com/Adobatto-Ariel"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit my GitHub
-        </a>
-      </header>
+      <ItemListContainer />
     </div>
   );
 }

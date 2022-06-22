@@ -1,10 +1,22 @@
 .headerNav {
   max-height: 150px;
-  background-color: #000;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: rgb(41, 41, 41);
+}
+.containerLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.containerLogo h1 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
 }
 .containerLogo img {
   width: 80px;
@@ -22,15 +34,32 @@ ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 li {
-  margin: 5px;
+  margin-right: 20px;
 }
 a {
   color: #fff;
   text-decoration: none;
   transition: all 0.3s;
+  font-size: 17px;
+  font-weight: 400;
 }
 a:hover {
   color: #00a3e8;
+}
+a .home {
+  font-weight: bold;
+}
+.userCart {
+  margin-left: 25px;
+}
+.userCart img {
+  margin: 5px;
+  width: 30px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 35%;
 }
