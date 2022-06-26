@@ -1,0 +1,73 @@
+* {
+  transition: all 0.3s;
+}
+.itemCount {
+  border-top: 1px solid rgb(180, 180, 180);
+  padding-top: 10px;
+}
+.botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.countContainer {
+  background-color: #00a2e852;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #00a2e852;
+  border-radius: 5px;
+}
+.reset {
+  display: inline-block;
+  width: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.459);
+  background-color: rgba(255, 255, 255, 0.118);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 2px;
+  margin-left: 5px;
+}
+.reset:hover {
+  border: 1px solid #fff;
+}
+.counter {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border-radius: 10%;
+  border: none;
+  margin-right: 5px;
+  color: #fff;
+  background-color: transparent;
+  font-size: 20px;
+}
+.boton {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border-radius: 10%;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+.boton:hover {
+  background-color: #00000010;
+}
+.btn {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  background-color: transparent;
+}
+.btn:hover {
+  filter: grayscale(50%);
+}
+.stock {
+  font-style: italic;
+}

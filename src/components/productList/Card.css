@@ -10,29 +10,3 @@
 .card-text {
   height: 180px;
 }
-.counter {
-  width: 40px;
-  height: 30px;
-  text-align: center;
-  border-radius: 10%;
-  border: 2px solid #00a3e8;
-  margin-right: 5px;
-  background-color: #00a3e8;
-  color: #fff;
-}
-.boton {
-  width: 35px;
-  height: 30px;
-  text-align: center;
-  border-radius: 10%;
-  background-color: #fff;
-  border: none;
-  margin-right: 5px;
-}
-.btn {
-  display: block;
-  margin-top: 10px;
-}
-.btn:hover {
-  filter: grayscale(50%);
-}
