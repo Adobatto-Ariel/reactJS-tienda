@@ -1,5 +1,5 @@
+import bag from "../../assets/icons/bag.svg";
 import "./CartWidget.css";
-import bag from "../assets/icons/bag.svg";
 
 function CartWidget() {
   return (

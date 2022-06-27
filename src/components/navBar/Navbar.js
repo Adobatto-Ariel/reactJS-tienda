@@ -1,6 +1,6 @@
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
+import user from "../../assets/icons/person.svg";
 import "./Navbar.css";
-import user from "../assets/icons/person.svg";
 import CartWidget from "./CartWidget";
 
 function Navbar() {
