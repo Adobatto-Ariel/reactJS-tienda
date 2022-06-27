@@ -43,7 +43,11 @@ function ItemCount({ stock }) {
   return (
     <div className="itemCount">
       <p className="stock">
-        {stock > 0 ? `Últimas ${stock} unidades!!!` : `Ya no quedan unidades!`}
+        {stock > 0
+          ? stock < 6
+            ? `Últimas ${stock} unidades!!!`
+            : `Stock disponible: ${stock} unidades`
+          : `Ya no quedan unidades!`}
       </p>
       <div className="botones">
         <div className="countContainer">

@@ -2,7 +2,7 @@
   transition: all 0.3s;
 }
 .itemCount {
-  border-top: 1px solid rgb(180, 180, 180);
+  border-top: 1px solid rgba(180, 180, 180, 0.196);
   padding-top: 10px;
 }
 .botones {
