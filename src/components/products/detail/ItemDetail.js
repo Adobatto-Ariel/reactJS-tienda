@@ -14,7 +14,7 @@ function ItemDetail() {
     }
     
     useEffect(() =>{
-        fetchDetail();
+        fetchDetail()
     }, [])
 
     return (
