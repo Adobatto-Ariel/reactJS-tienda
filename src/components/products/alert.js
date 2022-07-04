@@ -6,7 +6,7 @@ function mostrarError(error) {
     icon: "warning",
     width: 350,
     title: `${error}`,
-    background: "rgba(255, 255, 255, 0.9)",
+    background: "rgb(255, 255, 255)",
     showConfirmButton: true,
     timer: 3000
   });

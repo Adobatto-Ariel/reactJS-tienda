@@ -27,6 +27,7 @@
   border: 1px solid rgb(92, 92, 92);
   transition: all 0.3s;
   font-style: italic;
+  font-size: 15px;
 }
 .detalles:hover {
   background-color: rgb(92, 92, 92);

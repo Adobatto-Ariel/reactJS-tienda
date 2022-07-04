@@ -32,6 +32,7 @@ img:hover {
   padding: 10px;
   width: 100vw;
   background-color: rgb(55, 55, 55);
+  border-bottom: 3px solid rgb(100, 100, 100);
 }
 ul {
   list-style: none;
@@ -54,6 +55,13 @@ a {
 }
 a:hover {
   color: #00a3e8;
+}
+a.active{
+  color: #00a3e8;
+  border: 3px solid rgb(100, 100, 100);
+  padding: 10px 10px 17px;
+  border-radius: 10px 10px 0 0 ;
+  border-bottom: 3px solid rgb(55, 55, 55);
 }
 a .home {
   font-weight: bold;

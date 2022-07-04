@@ -4,7 +4,7 @@ import "./CartWidget.css";
 function CartWidget() {
   return (
     <div className="containerCart">
-      <img className="cart" src={bag} title="Ir al carrito" />
+      <img className="cart" src={bag} title="Ir al carrito" alt="Cart"/>
       <div className="cartCounter"></div>
     </div>
   );

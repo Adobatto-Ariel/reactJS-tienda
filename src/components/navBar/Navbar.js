@@ -2,32 +2,33 @@ import logo from "../../assets/logo.png";
 import user from "../../assets/icons/person.svg";
 import "./Navbar.css";
 import CartWidget from "./CartWidget";
+import { NavLink , Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <header className="header">
       <div className="headerNav">
-        <div className="containerLogo">
-          <img src={logo} />
-          <h1>MV Kydex® ARG</h1>
-        </div>
+        <Link to="home" className="containerLogo">
+            <img src={logo} alt="Logo Mv Kydex"/>
+            <h1>MV Kydex® ARG</h1>
+        </Link>
         <div className="userCart">
-          <img src={user} title="Login" />
+          <img src={user} title="Login" alt="user" />
           <CartWidget />
         </div>
       </div>
       <nav className="containerNav">
         <ul>
           <li>
-            <a className="home" href="#">
+            <NavLink activeClassName='active' to="home">
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#">Tienda</a>
+            <NavLink activeClassName='active' to="tienda">Tienda</NavLink>
           </li>
           <li>
-            <a href="#">Nosotros</a>
+            <NavLink activeClassName='active' to="nosotros">Nosotros</NavLink>
           </li>
         </ul>
       </nav>

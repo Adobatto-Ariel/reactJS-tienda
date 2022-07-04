@@ -1,6 +1,6 @@
 import "./ItemCount.css";
 import { useState } from "react";
-import mostrarError from "./alert";
+import mostrarError from "../alert";
 
 function ItemCount({ stock }) {
   const [num, setNum] = useState(0);
@@ -12,7 +12,7 @@ function ItemCount({ stock }) {
     if (num < stock) {
       setDisBtnMinus(false);
       setNum(num + 1);
-    } else if (stock != 0) {
+    } else if (stock !== 0) {
       mostrarError(`STOCK MÁXIMO:<br> ${stock} unidades!`);
     } else {
       mostrarError(`PRODUCTO<br>SIN STOCK`);
