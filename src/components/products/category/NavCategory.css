@@ -1,0 +1,24 @@
+.NavList{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.271);
+    border-bottom: 3px solid rgb(100, 100, 100);
+  }
+  .ulCategory{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .liCategory{
+    font-size: 15px;
+  }
+  .combos{
+   
+    padding: 0 10px;
+    margin: 0 10px;
+  }

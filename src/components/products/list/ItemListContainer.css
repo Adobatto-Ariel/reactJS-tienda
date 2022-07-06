@@ -4,3 +4,9 @@
 }
 
 
+@media (max-width: 550px) {
+  .ItemListContainer {
+    padding: 15px;
+  }
+}
+

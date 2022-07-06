@@ -1,11 +1,15 @@
 import ItemList from "./ItemList";
 import "./ItemListContainer.css";
+import NavCategory from "../category/NavCategory";
 
 function ItemListContainer() {
   return (
-    <main className="ItemListContainer">
-      <ItemList />
-    </main>
+    <>
+      <NavCategory />
+      <main className="ItemListContainer">
+        <ItemList />
+      </main>
+    </>
   );
 }
 

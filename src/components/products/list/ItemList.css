@@ -2,7 +2,7 @@
   padding: 30px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: auto;
   gap: 20px 30px;
   background-color: transparent;
@@ -95,7 +95,7 @@
 
 @media (max-width: 1200px) {
   .ItemList {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (max-width: 800px) {
@@ -105,6 +105,6 @@
 }
 @media (max-width: 550px) {
   .ItemList {
-    width: 90%;
+    width: 100%;
   }
 }

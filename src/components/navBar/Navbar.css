@@ -12,11 +12,25 @@
   justify-content: space-around;
   align-items: center;
 }
+.container-LogoText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
 h1 {
   font-size: 20px;
   color: #fff;
   font-weight: 400;
   margin: 0;
+  margin-top: -4px;
+  line-height: 22px;
+}
+.holster{
+  font-size: 12px;
+  margin-top: -3px;
+  letter-spacing: 7px;
 }
 .containerLogo img {
   width: 80px;
@@ -31,7 +45,7 @@ img:hover {
 .containerNav {
   padding: 10px;
   width: 100vw;
-  background-color: rgb(55, 55, 55);
+  background-color: rgba(55, 55, 55, 0.818);
   border-bottom: 3px solid rgb(100, 100, 100);
 }
 ul {
@@ -43,7 +57,7 @@ ul {
   margin: 0;
   padding: 5px;
 }
-li {
+.li {
   margin: 0 20px;
 }
 a {
@@ -57,11 +71,9 @@ a:hover {
   color: #00a3e8;
 }
 a.active{
-  color: #00a3e8;
-  border: 3px solid rgb(100, 100, 100);
-  padding: 10px 10px 17px;
-  border-radius: 10px 10px 0 0 ;
-  border-bottom: 3px solid rgb(55, 55, 55);
+  padding-bottom: 2px;
+  margin-bottom: 0;
+  border-bottom: 3px solid #00a3e8;
 }
 a .home {
   font-weight: bold;
