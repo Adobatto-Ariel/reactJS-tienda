@@ -1,5 +1,4 @@
 import logo from "../../assets/logo.png";
-import user from "../../assets/icons/person.svg";
 import "./Navbar.css";
 import CartWidget from "./CartWidget";
 import { NavLink, Link } from "react-router-dom";
@@ -16,7 +15,9 @@ function Navbar() {
           </div>
         </Link>
         <div className="userCart">
-          <img src={user} title="Login" alt="user" />
+          <div className="container-icon" title="Login">
+            <ion-icon name="person-outline"></ion-icon>
+          </div>
           <CartWidget />
         </div>
       </div>

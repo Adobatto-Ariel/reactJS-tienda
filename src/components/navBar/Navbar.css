@@ -78,13 +78,6 @@ a.active{
 a .home {
   font-weight: bold;
 }
-.userCart {
-  margin-left: 25px;
-}
-.userCart img {
-  margin: 5px;
-  width: 30px;
-  background-color: rgb(255, 255, 255);
-  padding: 5px;
-  border-radius: 35%;
+.userCart{
+  display: flex;
 }

@@ -9,7 +9,7 @@ function ItemCategory() {
    */
   const [isLoading, setIsLoading] = useState(true);
   const fetchCategory = () => {
-    fetch(`https://api.npoint.io/12da0b198a1c538580f4/`)
+    fetch(`https://api.npoint.io/a02bf179839164f8f769`)
       .then((resp) => resp.json())
       .then((data) => {
         const myData = data.filter((item) => item.category === params.category);

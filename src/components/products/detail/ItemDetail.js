@@ -8,7 +8,7 @@ function ItemDetail() {
   const [detailFetch, setDetailFetch] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const fetchDetail = () => {
-    fetch(`https://api.npoint.io/12da0b198a1c538580f4/${params.id}`)
+    fetch(`https://api.npoint.io/a02bf179839164f8f769/${params.id}`)
       .then((resp) => resp.json())
       .then((data) => {
         setDetailFetch(data);
@@ -42,7 +42,6 @@ function ItemDetail() {
             />
             <div className="count">
               <ItemCount stock={detailFetch.stock} />
-              <button className="comprar btn btn-success">Comprar</button>
             </div>
           </div>
           <div className="card-body">
@@ -61,13 +60,12 @@ function ItemDetail() {
             <p>★ ★ ★ ★ ★</p>
             <span>Color:</span>
             <div className="colorSelect">
-              <div value="#000000" className="negro color"></div>
-              <div value="#d3db60" className="verde color"></div>
-              <div value="#398c37" className="arena color"></div>
+              <div className="negro color"></div>
+              <div className="verde color"></div>
+              <div className="arena color"></div>
             </div>
             <div className="count-400">
               <ItemCount stock={detailFetch.stock} />
-              <button className="comprar btn btn-success">Comprar</button>
             </div>
             <em>Descripción:</em>
             <p className="description">{detailFetch.description}</p>

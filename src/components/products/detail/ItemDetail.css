@@ -41,20 +41,6 @@
     font-size: 25px;
     color: rgb(0, 193, 16);
   }
-  .detalles {
-    background-color: transparent;
-    color: #fff;
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid rgb(92, 92, 92);
-    transition: all 0.3s;
-    font-style: italic;
-  }
-  .detalles:hover {
-    background-color: rgb(92, 92, 92);
-  }
   p {
     color: rgb(29, 221, 221);
   }

@@ -1,23 +1,26 @@
 .card {
-  transition: all 0.2s;
+  transition: all 1s;
   background-color: rgba(70, 70, 70, 0.804);
   box-shadow: 1px 1px 5px rgb(169, 169, 169);
   color: #fff;
-  
+  border-radius: 20px;
+  border: 2px solid rgb(134, 134, 134);
 }
 .card:hover {
-  box-shadow: 2px 2px 10px #fff;
+  border: 2px solid rgb(255, 255, 255);
 }
 .container-img{
-  width: 100%;
-  height: 230px;
+  width: 90%;
+  height: 200px;
+  border-radius: 20px;
+  margin: 0 auto;
   margin-top: 10px;
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.103);
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.245);
 }
 .img{
   width: 80%;
-  height: 100%;
+  height: 170px;
   display: block;
   margin: 0 auto;
 }
@@ -26,14 +29,11 @@
 }
 .card-title {
   border-top: 1px solid rgba(180, 180, 180, 0.196);
-  margin-top: 10px;
-  padding-top: 10px;
-  margin-bottom: 0;
 }
 .subtitleItem {
-  height: 35px;
   color: rgb(219, 219, 219);
   font-weight: 400;
+  margin-bottom: 15px;
 }
 .sinDescuento{
   color: rgb(205, 205, 205);
@@ -46,23 +46,23 @@
 }
 .descuento{
   color: rgb(0, 193, 16);
-  margin: 5px;
+  margin-left: 10px;
   font-size: 15px;
 }
 .detalles {
   background-color: transparent;
   color: #fff;
   width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
+  margin-top: 20px;
+  padding: 10px;
   border-radius: 5px;
-  border: 1px solid rgb(92, 92, 92);
+  border: 1px solid rgb(255, 255, 255);
   transition: all 0.3s;
   font-style: italic;
   font-size: 15px;
 }
 .detalles:hover {
-  background-color: rgb(92, 92, 92);
+  background-color: rgba(255, 255, 255, 0.149);
 }
 p {
   color: rgb(29, 221, 221);

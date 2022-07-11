@@ -9,6 +9,7 @@ import Tienda from "./pages/Tienda/Tienda";
 import NotFound from "./pages/NotFound/NotFound";
 import ItemDetailContainer from "./components/products/detail/ItemDetailContainer";
 import ItemCategoryContainer from "./components/products/category/ItemCategoryContainer";
+import Cart from "./components/products/list/Cart";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/detalles/:id" element={<ItemDetailContainer />} />
+        <Route path="/cart" element={<Cart />} />
         <Route
           path="/categorias/:category"
           element={<ItemCategoryContainer />}

@@ -1,10 +1,11 @@
-import bag from "../../assets/icons/bag.svg";
 import "./CartWidget.css";
 
 function CartWidget() {
   return (
     <div className="containerCart">
-      <img className="cart" src={bag} title="Ir al carrito" alt="Cart"/>
+      <div className="container-icon" title="Ir al carrito">
+        <ion-icon name="bag-outline"></ion-icon>
+      </div>
       <div className="cartCounter"></div>
     </div>
   );

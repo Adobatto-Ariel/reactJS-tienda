@@ -22,12 +22,12 @@ function Item({ id, title, subtitle, alt, src, price, stock }) {
         </span>
         <h4 className="card-title">{title}</h4>
         <h6 className="subtitleItem">{subtitle}</h6>
-        <Link to={`/detalles/${id}`}>
-          <button className="detalles" onClick={<ItemDetailContainer />}>
+        <ItemCount stock={stock} title={title} price={price} />
+        <Link to={`/detalles/${id}`} key={id}>
+          <button className="detalles p-3" onClick={ItemDetailContainer}>
             Ver detalles del producto »
           </button>
         </Link>
-        <ItemCount stock={stock} />
       </div>
     </div>
   );
