@@ -1,9 +1,11 @@
-import './Home.css';
+import "./Home.css";
 
-function Home(){
-    return(
-        <h2>Home</h2>
-    )
+function Home() {
+    return (
+        <div className="home">
+            <ion-icon name="home-outline"></ion-icon>
+        </div>
+    );
 }
 
 export default Home;

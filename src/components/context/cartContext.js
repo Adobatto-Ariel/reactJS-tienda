@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import CartWidget from "../navBar/CartWidget";
 import mostrarError from "../products/alert";
 
 export const cartContext = createContext({});
@@ -13,8 +14,7 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     };
 
     const isInCart = (id) => {
-        const newCart = [...cart].filter((element) => element.item.id !== id);
-        setCart(newCart);
+        return cart.find((element) => element.item.id === id);
     };
 
     const removeFromCart = (id) => {
@@ -57,12 +57,32 @@ export const CartProvider = ({ defaultValue = [], children }) => {
         }
     };
 
+    //cantidad total de items
+    const getQuantity = (cart) => {
+        let cantidad = 0;
+        cart.forEach((element) => {
+            cantidad = cantidad + element.quantity;
+        });
+        <CartWidget quantity={cantidad} />;
+        return cantidad;
+    };
+
+    //total a pagar de la compra completa
+    const getTotal = (cart) => {
+        let total = 0;
+        cart.forEach((element) => {
+            total += element.quantity * element.item.price;
+        });
+        return total;
+    };
     //exportamos
     const context = {
         cart,
         addToCart,
         clearCart,
         removeFromCart,
+        getQuantity,
+        getTotal,
     };
 
     return <Provider value={context}>{children}</Provider>;

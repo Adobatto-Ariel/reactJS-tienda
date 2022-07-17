@@ -7,7 +7,6 @@ function ItemCount({ stock, onAdd }) {
     const [disBtnPlus, setDisBtnPlus] = useState(false);
     const [disBtnMinus, setDisBtnMinus] = useState(true);
     const [newStock, setNewStock] = useState(stock);
-    const [counter, setCounter] = useState(true);
 
     const sumar = () => {
         if (num < newStock) {
@@ -35,7 +34,6 @@ function ItemCount({ stock, onAdd }) {
             if (num > 0) {
                 console.log(`Agregados al carrito ${num} productos`);
                 setNewStock(Number(newStock) - num);
-                setCounter(false);
                 onAdd(num);
             }
         } else {
@@ -45,50 +43,46 @@ function ItemCount({ stock, onAdd }) {
     };
 
     return (
-        <>
-            {counter && (
-                <div className="itemCount">
-                    <p className="stock">
-                        {newStock > 0
-                            ? newStock < 6
-                                ? `Últimas ${newStock} unidades!!!`
-                                : `Stock disponible: ${newStock} unidades`
-                            : `Ya no quedan unidades!`}
-                    </p>
-                    <div className="botones">
-                        <div className="countContainer">
-                            <button
-                                className="boton"
-                                id="minus"
-                                onClick={restar}
-                                disabled={disBtnMinus}
-                            >
-                                -
-                            </button>
-                            <span className="counter">{num}</span>
-                            <button
-                                className="boton"
-                                id="plus"
-                                onClick={sumar}
-                                disabled={disBtnPlus}
-                            >
-                                +
-                            </button>
-                        </div>
-                        <button className="reset" onClick={reset}>
-                            ↻
-                        </button>
-                    </div>
+        <div className="itemCount">
+            <p className="stock">
+                {newStock > 0
+                    ? newStock < 6
+                        ? `Últimas ${newStock} unidades!!!`
+                        : `Stock disponible: ${newStock} unidades`
+                    : `Ya no quedan unidades!`}
+            </p>
+            <div className="botones">
+                <div className="countContainer">
                     <button
-                        type="submit"
-                        className="btn btn-primary"
-                        onClick={addToCart}
+                        className="boton"
+                        id="minus"
+                        onClick={restar}
+                        disabled={disBtnMinus}
                     >
-                        {stock > 0 ? `Agregar al carrito` : `Sin stock`}
+                        -
+                    </button>
+                    <span className="counter">{num}</span>
+                    <button
+                        className="boton"
+                        id="plus"
+                        onClick={sumar}
+                        disabled={disBtnPlus}
+                    >
+                        +
                     </button>
                 </div>
-            )}
-        </>
+                <button className="reset" onClick={reset}>
+                    ↻
+                </button>
+            </div>
+            <button
+                type="submit"
+                className="btn btn-primary"
+                onClick={addToCart}
+            >
+                {stock > 0 ? `Agregar al carrito` : `Sin stock`}
+            </button>
+        </div>
     );
 }
 

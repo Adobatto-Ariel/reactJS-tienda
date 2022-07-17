@@ -56,13 +56,13 @@
   margin-top: 20px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgba(4, 200, 7, 0.459);
   transition: all 0.3s;
-  font-style: italic;
   font-size: 15px;
 }
 .detalles:hover {
-  background-color: rgba(255, 255, 255, 0.149);
+  background-color: rgba(9, 209, 25, 0.289);
+  border: 1px solid rgb(4, 200, 8);
 }
 p {
   color: rgb(29, 221, 221);

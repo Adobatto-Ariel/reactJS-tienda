@@ -3,31 +3,30 @@
   position: relative;
   transition: all .3s;
 }
-.cartCounter {
-  position: absolute;
+.counterProduct{
+  color: #fff;
+  font-size: 14px;
+  padding: 1px;
   width: 25px;
-  height: 25px;
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  border: 1px solid rgb(2, 134, 249);
   border-radius: 50%;
-  background: #00a3e8;
-  top: -5px;
-  right: -10px;
-  border: 1px solid #fff;
   text-align: center;
-  color: #fff;
-  font-weight: bold;
-  /* display: inline; */
-  display: none;
+  background-color: rgb(2, 134, 249);
+  z-index: 999;
 }
+
 ion-icon{
-  font-size: 20px;
+  font-size: 25px;
   color: #fff;
-  padding: 5px;
   cursor: pointer;
+  border: 2px solid rgb(124, 124, 124);
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 50%;
 }
-.container-icon{
-  height: 30px;
-  border-radius: 5px;
-}
-.container-icon:hover{
-  background-color: rgb(58, 58, 58);
+ion-icon:hover{
+  border: 2px solid #fff;
 }

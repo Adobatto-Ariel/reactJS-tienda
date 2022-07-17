@@ -4,16 +4,30 @@ import "./ItemDetail.css";
 import ItemCount from "../list/ItemCount";
 import { cartContext } from "../../context/cartContext";
 import { Link } from "react-router-dom";
+import mostrarError from "../alert";
 
 function ItemDetail() {
     const params = useParams();
     const [detailFetch, setDetailFetch] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [itemCount, setItemCount] = useState();
+    const [newError, setNewError] = useState(null);
     const { addToCart } = useContext(cartContext);
     const fetchDetail = () => {
         fetch(`https://api.npoint.io/a02bf179839164f8f769/${params.id}`)
-            .then((resp) => resp.json())
+            .then((resp) => {
+                if (!resp.ok) {
+                    throw new Error(
+                        `Ocurrió un problema!<br>Inténtelo mas tarde`
+                    );
+                } else {
+                    return resp.json();
+                }
+            })
+            .catch((error) => {
+                setNewError(error.message);
+                setIsLoading(false);
+            })
             .then((data) => {
                 setDetailFetch(data);
             });
@@ -40,6 +54,7 @@ function ItemDetail() {
                     </div>
                 </div>
             )}
+            {newError && mostrarError(newError)}
             {detailFetch.length !== 0 && (
                 <div className="ItemDetail">
                     <div className="containerImgBtn">
@@ -50,15 +65,22 @@ function ItemDetail() {
                         />
                         <div className="count">
                             {itemCount > 0 ? (
-                                <Link to={`/cart`}>
-                                    <button className="comprar btn btn-success">
-                                        Ir al carrito
-                                    </button>
-                                </Link>
+                                <div>
+                                    <Link to={`/cart`}>
+                                        <button className="comprar btn btn-success">
+                                            Ir al carrito
+                                        </button>
+                                    </Link>
+                                    <Link to={`/tienda`}>
+                                        <button className="irAtienda btn btn-secondary">
+                                            Ir a la tienda
+                                        </button>
+                                    </Link>
+                                </div>
                             ) : (
                                 <ItemCount
-                                    onAdd={onAdd}
                                     stock={detailFetch.stock}
+                                    onAdd={onAdd}
                                 />
                             )}
                         </div>

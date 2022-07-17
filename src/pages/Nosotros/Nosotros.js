@@ -1,9 +1,11 @@
-import './Nosotros.css';
+import "./Nosotros.css";
 
-function Nosotros(){
-    return(
-        <h2>Nosotros</h2>
-    )
+function Nosotros() {
+    return (
+        <div className="home">
+            <ion-icon name="accessibility-outline"></ion-icon>
+        </div>
+    );
 }
 
 export default Nosotros;

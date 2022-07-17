@@ -1,0 +1,15 @@
+.notFound{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.notFound img{
+   transform: none;
+}
+.volver{
+    width: 500px;
+    margin-top: 30px;
+}

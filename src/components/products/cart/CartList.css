@@ -1,0 +1,109 @@
+button{
+    text-transform: uppercase;
+}
+.CartVacio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+}
+.vacio{
+    margin-top: -300px;
+}
+.total{
+    color: #fff;
+    margin: 0;
+}
+.trash{
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid rgb(68, 66, 66);
+    padding: 6px 6px 4px;
+    border-radius: 3px;
+}
+.trash:hover{
+    border: 1px solid #fff;
+}
+.CartItemList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    background-color: rgba(12, 12, 12, 0.74);
+    width: 80%;
+    border: 1px solid rgb(184, 184, 184);
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    margin: 0 auto;
+    margin-top: 20px;
+    transition: all .2s;
+    border-radius: 5px;
+}
+.CartItemList:hover{
+    border-top: 1px solid rgb(184, 184, 184);
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+.CartItemList img{
+    width: 100px;
+}
+.pCart{
+    color: #fff;
+    font-size: 25px;
+}
+.totalPrice{
+    width: 79%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.totalPrice-button{
+    padding: 3px 10px 5px;
+    border-radius: 5px;
+    background-color: rgba(4, 200, 7, 0);
+    border: 1px solid rgb(4, 200, 8);
+    color: #fff;
+}
+.totalPrice-button:hover{
+    
+    background-color: rgba(4, 200, 7, 0.396);
+}
+.clear-button{
+    margin-left: 10px;
+    padding: 3px 10px 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(200, 4, 4);
+    color: #fff;
+}
+.clear-button:hover{
+    background-color: rgba(250, 5, 5, 0.485);
+}
+.spanCart{
+    color: rgb(210, 210, 210);
+    display: block;
+}
+.spanTotal{
+    color: rgb(4, 200, 8);
+    font-size: 30px;
+}
+.CantidadPrecioTotal{
+    width: 90%;
+    text-align: right;
+    margin-top: 20px;
+}
+.CantidadPrecioTotal span{
+    color: #fff;
+    padding: 3px;
+}
+.CantidadPrecioTotal .resultado{
+    font-size: 25px;
+    color: rgb(4, 200, 8);
+}
