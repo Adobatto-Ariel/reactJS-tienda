@@ -47,7 +47,7 @@ function CartList() {
                                             Cantidad: {element.quantity}
                                         </span>
                                     </div>
-                                    <div>
+                                    <div className="subTotal">
                                         <p className="total">Subtotal</p>
                                         <span className="spanTotal">
                                             $

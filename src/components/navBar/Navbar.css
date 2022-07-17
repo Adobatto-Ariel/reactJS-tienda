@@ -1,10 +1,16 @@
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
 .headerNav {
-  max-height: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   background-color: rgb(41, 41, 41);
+  
 }
 .containerLogo {
   display: flex;
@@ -44,9 +50,8 @@ img:hover {
 }
 .containerNav {
   padding: 10px;
-  width: 100vw;
-  background-color: rgba(55, 55, 55, 0.818);
-  border-bottom: 3px solid rgb(100, 100, 100);
+  text-align: left;
+  width: 400px;
 }
 ul {
   list-style: none;
@@ -80,4 +85,21 @@ a .home {
 }
 .userCart{
   display: flex;
+}
+.containerLogoIcon{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 550px) {
+  .headerNav {
+    flex-direction: column;
+  }
+  .container-LogoText{
+    display: none;
+  }
+  .containerLogoIcon{
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+  }
 }

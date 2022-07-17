@@ -6,10 +6,11 @@
     align-items: center;
     height: 50px;
     background-color: rgb(92, 92, 92);
-    border-bottom: 3px solid rgb(100, 100, 100);
+    border-bottom: 3px solid rgb(172, 172, 172);
     position: sticky;
-    top: 0;
+    top: 70px;
     z-index: 9999;
+    
   }
   .ulCategory{
     display: flex;
@@ -18,10 +19,15 @@
     align-items: center;
   }
   .liCategory{
-    font-size: 15px;
+    font-size: 12px;
+    padding: 0 10px;
   }
   .combos{
-   
-    padding: 0 10px;
-    margin: 0 10px;
+    border-left: 1px solid rgb(181, 181, 181) ;
+    border-right: 1px solid rgb(181, 181, 181) ;
+  }
+  @media (max-width: 550px) {
+    .NavList{
+      top: 140px;
+    }
   }

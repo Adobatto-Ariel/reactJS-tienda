@@ -19,12 +19,8 @@ button{
 .trash{
     color: #fff;
     background-color: transparent;
-    border: 1px solid rgb(68, 66, 66);
     padding: 6px 6px 4px;
-    border-radius: 3px;
-}
-.trash:hover{
-    border: 1px solid #fff;
+    border: none;
 }
 .CartItemList{
     display: flex;
@@ -107,3 +103,27 @@ button{
     font-size: 25px;
     color: rgb(4, 200, 8);
 }
+@media (max-width: 500px){
+    .CartItemList {
+       flex-direction: column;
+      }
+      .CartItemList img{
+        width: 100%;
+        margin-bottom: 10px;
+        transform: none;
+      }
+      .subTotal{
+        margin: 15px;
+        padding: 10px;
+        padding-left: 15px;
+        width: 100%;
+        border-top: 1px solid rgb(106, 104, 104) ;
+      }
+      .trash ion-icon{
+        display: block;
+      }
+      .Cart{
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
+    }
