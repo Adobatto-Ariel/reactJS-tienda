@@ -2,29 +2,34 @@ import { useEffect, useState } from "react";
 import Item from "./Item";
 import "./ItemList.css";
 import mostrarError from "../alert";
+import { getFirestore, getDocs, collection } from "firebase/firestore";
 
 function ItemList() {
     const [productos, setProductos] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const [newError, setNewError] = useState(null);
+
     useEffect(() => {
         setTimeout(() => {
-            fetch("https://api.npoint.io/a02bf179839164f8f769")
-                .then((resp) => {
-                    if (!resp.ok) {
-                        throw new Error(
-                            `Ocurrió un problema!<br>Inténtelo mas tarde`
-                        );
+            const db = getFirestore(); //db = data base - base de datos
+            const prodRef = collection(db, "productos");
+            getDocs(prodRef)
+                .then((snapshot) => {
+                    if (snapshot.size === 0) {
+                        throw new Error(`No results`);
                     } else {
-                        return resp.json();
+                        setProductos(
+                            snapshot.docs.map((doc) => ({
+                                id: doc.id,
+                                ...doc.data(),
+                            }))
+                        );
                     }
                 })
                 .catch((error) => {
                     setNewError(error.message);
                     setIsLoading(false);
-                })
-                .then((data) => setProductos(data))
-                .catch((err) => console.log(err));
+                });
             setIsLoading(false);
         }, 2000);
     }, []);

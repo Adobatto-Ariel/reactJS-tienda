@@ -3,12 +3,12 @@ import ItemDetail from "./ItemDetail";
 import "./ItemDetailContainer.css";
 
 function ItemDetailContainer() {
-  return (
-    <main className="ItemDetailContainer">
-      <NavCategory />
-      <ItemDetail />
-    </main>
-  );
+    return (
+        <main className="ItemDetailContainer">
+            <NavCategory />
+            <ItemDetail />
+        </main>
+    );
 }
 
 export default ItemDetailContainer;

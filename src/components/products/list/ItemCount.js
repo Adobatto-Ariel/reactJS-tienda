@@ -6,13 +6,15 @@ function ItemCount({ stock, onAdd }) {
     const [num, setNum] = useState(0);
     const [disBtnPlus, setDisBtnPlus] = useState(false);
     const [disBtnMinus, setDisBtnMinus] = useState(true);
-    const [newStock, setNewStock] = useState(stock);
+    let newStock = stock;
+    console.log(newStock);
+    console.log(typeof newStock);
 
     const sumar = () => {
         if (num < newStock) {
             setDisBtnMinus(false);
             setNum(num + 1);
-        } else if (newStock !== 0) {
+        } else if (newStock !== 0 && num === newStock) {
             mostrarError(`STOCK MÁXIMO:<br> ${newStock} unidades!`);
         } else {
             mostrarError(`PRODUCTO<br>SIN STOCK`);
@@ -33,7 +35,7 @@ function ItemCount({ stock, onAdd }) {
         if (newStock > 0) {
             if (num > 0) {
                 console.log(`Agregados al carrito ${num} productos`);
-                setNewStock(Number(newStock) - num);
+                newStock = newStock - num;
                 onAdd(num);
             }
         } else {
@@ -80,7 +82,7 @@ function ItemCount({ stock, onAdd }) {
                 className="btn btn-primary"
                 onClick={addToCart}
             >
-                {stock > 0 ? `Agregar al carrito` : `Sin stock`}
+                {newStock > 0 ? `Agregar al carrito` : `Sin stock`}
             </button>
         </div>
     );
