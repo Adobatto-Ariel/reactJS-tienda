@@ -2,12 +2,13 @@ import "./CartList.css";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { cartContext } from "../../context/cartContext";
+import Order from "../orders/Order";
 
 function CartList() {
     const { cart, removeFromCart, clearCart, getQuantity, getTotal } =
         useContext(cartContext);
     const [isLoading, setIsLoading] = useState(true);
-    const [showOrder, setShowOrder] = useState(true);
+    const [showOrder, setShowOrder] = useState(false);
     const [terminar, setTerminar] = useState(false);
 
     useEffect(() => {
@@ -27,7 +28,7 @@ function CartList() {
                     </div>
                 )}
                 <div className="CartListContainer">
-                    {showOrder ? (
+                    {!showOrder ? (
                         <div className="CartList">
                             {cart.map((element) => (
                                 <div className="CartItemList">
@@ -67,32 +68,44 @@ function CartList() {
                             ))}
                         </div>
                     ) : (
-                        //<Order order={cart} getTotal={getTotal} />
-                        console.log("Aca iria la orden de compra")
+                        <Order />
                     )}
                 </div>
-                <div className="CantidadPrecioTotal">
-                    <div>
-                        <span>Cantidad total de productos: </span>
-                        <span className="resultado">{getQuantity(cart)}</span>
-                    </div>
-                    <div>
-                        <span>Total a pagar: </span>
-                        <span className="resultado">${getTotal(cart)}</span>
-                    </div>
-                </div>
                 {terminar && (
-                    <div className="totalPrice">
-                        <button
-                            onClick={() => setShowOrder(false)}
-                            className="totalPrice-button"
-                        >
-                            Terminar compra
-                        </button>
-                        <button onClick={clearCart} className="clear-button">
-                            Limpiar carrito
-                        </button>
-                    </div>
+                    <>
+                        <div className="CantidadPrecioTotal">
+                            <div>
+                                <span>Cantidad total de productos: </span>
+                                <span className="resultado">
+                                    {getQuantity(cart)}
+                                </span>
+                            </div>
+                            <div>
+                                <span>Total a pagar: </span>
+                                <span className="resultado">
+                                    ${getTotal(cart)}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="totalPrice">
+                            <button
+                                onClick={() => {
+                                    setShowOrder(true);
+                                    setTerminar(false);
+                                }}
+                                className="totalPrice-button"
+                            >
+                                Terminar compra
+                            </button>
+                            <button
+                                onClick={clearCart}
+                                className="clear-button"
+                            >
+                                Limpiar carrito
+                            </button>
+                        </div>
+                    </>
                 )}
             </main>
         );

@@ -1,0 +1,35 @@
+
+.container-form{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(122, 122, 122, 0.54);
+    padding:70px;
+}
+.container-form form{
+    background-color: rgba(203, 203, 203, 0.54);
+    margin: 0 auto;
+    padding: 30px;
+    width: 500px;
+    border-radius: 8px;
+}
+.form-control{
+    margin-bottom: 15px;
+}
+.resetForm, .submit{
+    display: inline-block;
+}
+.resetForm{
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.581);
+    transition: all .3s;
+}
+.resetForm:hover{
+    background-color: #fff;
+}
+
+.submit{
+    width: 70%;
+    margin-left: 10%;
+}
+
+

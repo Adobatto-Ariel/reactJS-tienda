@@ -51,7 +51,6 @@ function ItemDetail() {
                 </div>
             )}
             {newError && mostrarError(newError)}
-            {/*  {productos.length !== 0 && ( */}
             <div className="ItemDetail">
                 <div className="containerImgBtn">
                     <img
