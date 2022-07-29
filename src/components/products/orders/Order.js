@@ -66,19 +66,6 @@ const Order = () => {
             clearCart();
         });
     };
-
-    /*  function successMsj(collectionRef, newOrder) {
-        getDoc(collectionRef, newOrder).then((res) => {
-            console.log(res);
-            Swal.fire({
-                icon: "success",
-                title: `Compra exitosa!<br>Felicitaciones ${res.name}`,
-                text: `Tu pedido llegara a ${res.adress} en 48 horas.<br>`,
-                footer: `Nro de order<br>${res.id}`,
-                showCloseButton: true,
-            });
-        });
-    } */
     return (
         <div className="container-form">
             {form && (

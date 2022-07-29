@@ -4,7 +4,7 @@ function success(name, quantity, total, id, fecha) {
     Swal.fire({
         position: "center",
         icon: "success",
-        width: 450,
+        width: 400,
         title: `Gracias ${name} por tu compra.`,
         html: `
             <p>Detalle:</p>

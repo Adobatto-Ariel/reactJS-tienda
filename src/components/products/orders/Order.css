@@ -33,3 +33,16 @@
 }
 
 
+@media (max-width: 500px){
+    .container-form{
+        padding: 15px 10px;
+    }
+    .container-form form{
+        width: 100%;
+    }
+    form legend{
+        text-align: center;
+        font-weight: 600;
+    }
+
+}
