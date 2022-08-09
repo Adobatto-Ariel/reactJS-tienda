@@ -9,5 +9,11 @@ Los colores y fondos de mi proyecto, son acordes a las solicitudes de mi colega.
 #También agregue
 -fontawesome : para íconos, pero no supe usarla. Leí documentación oficial, pero aún así no pude solucionarlo.
 
-Creé varios componentes, y decidí separarlos en carpetas. Por el momento solo tengo la carpeta "navBar" y "products", pero me gusta tener el proyecto ordenado de esa forma.
+Creé varios componentes, y decidí separarlos en carpetas para mantenerlo ordenado.
 Para la navegación por categorías, cree un nuevo componente llamado ItemCategory, el cual reutiliza a ItemList y sus estilos.
+Se crearon las funciones en el context utilizadas en el carrito y orden de compra.
+Confeccione una orden de compra en la cual, previo a la confirmación de la compra, el usuario debe ingresar sus datos en un formulario.
+
+Los datos de los productos como así también las ordenes de compra son almacenados en Firestore.
+
+El proyecto apunta específicamente a la creación de la tienda en línea junto a sus funcionalidades.
