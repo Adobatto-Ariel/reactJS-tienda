@@ -17,3 +17,5 @@ Confeccione una orden de compra en la cual, previo a la confirmación de la comp
 Los datos de los productos como así también las ordenes de compra son almacenados en Firestore.
 
 El proyecto apunta específicamente a la creación de la tienda en línea junto a sus funcionalidades.
+
+🎬[Recorrido para una compra](https://res.cloudinary.com/arieladobatto/video/upload/v1660094942/videoRecorrido/video-compra_rmnpje.mp4)
